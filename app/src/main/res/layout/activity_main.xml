@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/googleButton"
+        android:layout_width="329dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/google"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/stackOverflowButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/kotlinDocsButton"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/purple_700"
+        android:text="@string/kotlin_docs"
+        app:iconTint="@color/purple_700"
+        app:layout_constraintBottom_toTopOf="@+id/androidDevButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/purple_700" />
+
+    <Button
+        android:id="@+id/androidDevButton"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/purple_700"
+        android:text="@string/android_dev"
+        app:iconTint="@color/purple_700"
+        app:layout_constraintBottom_toTopOf="@+id/previousButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/purple_700" />
+
+    <Button
+        android:id="@+id/previousButton"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="284dp"
+        android:background="@color/purple_700"
+        android:text="@string/previous"
+        app:iconTint="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/purple_700"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/stackOverflowButton"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/purple_700"
+        android:text="@string/stack_overflow"
+        app:iconTint="@color/purple_700"
+        app:layout_constraintBottom_toTopOf="@+id/kotlinDocsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/purple_700" />
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="@string/search_term"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/googleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
