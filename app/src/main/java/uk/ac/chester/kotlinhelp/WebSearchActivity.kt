@@ -22,7 +22,7 @@ class WebSearchActivity : AppCompatActivity() {
         setContentView(view)
 
 
-        var url = savedInstanceState?.getString("url") ?: intent.getStringExtra("url")
+        val url = savedInstanceState?.getString("url") ?: intent.getStringExtra("url")
 
 
         binding.webView.webViewClient = WebViewClient() //prevents opening in browser app

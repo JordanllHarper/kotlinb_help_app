@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             loadWebActivity("https://stackoverflow.com/search?q=$encodedSearchTerm")
         }
         binding.kotlinDocsButton.setOnClickListener {
-            loadWebActivity("https://kotlinlang.org/search?q=$encodedSearchTerm&p=0")
+            loadWebActivity("https://kotlinlang.org/docs/home.html?q=$encodedSearchTerm&s=full")
         }
         binding.androidDevButton.setOnClickListener {
             loadWebActivity("https://developer.android.com/s/?q=$encodedSearchTerm")
@@ -85,6 +85,7 @@ class MainActivity : AppCompatActivity() {
     private fun loadWebActivity(url: String) {
         val intent = Intent(this, WebSearchActivity::class.java)
         intent.putExtra("url", url)
+
         val sharedPref = this.getPreferences(Context.MODE_PRIVATE) ?: return
         with(sharedPref.edit()) {
             putString("prevUrl", url)
